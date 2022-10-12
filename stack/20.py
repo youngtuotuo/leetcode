@@ -1,7 +1,9 @@
+# https://leetcode.com/problems/valid-parentheses/
+# O(n), O(n)
 class Solution:
     def isValid(self, s: str) -> bool:
         left = []
-        pair = {'(':')', '[':']', '{':'}'}
+        pair = {"(": ")", "[": "]", "{": "}"}
         for p in s:
             if p in pair:
                 left.append(p)
@@ -9,11 +11,6 @@ class Solution:
                 if len(left) == 0 or pair[left.pop()] != p:
                     return False
         return len(left) == 0
-
-
-
-
-
 
 
 if __name__ == "__main__":

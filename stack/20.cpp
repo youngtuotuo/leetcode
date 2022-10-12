@@ -4,6 +4,8 @@
 #include <unordered_map>
 using namespace std;
 
+// https://leetcode.com/problems/valid-parentheses/
+// O(n), O(n)
 class Solution {
 public:
   bool isValid(string s) {
@@ -28,7 +30,6 @@ public:
     return (left.size() == 0);
   }
 };
-
 
 int main(int argc, char *argv[]) {
 

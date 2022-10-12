@@ -1,3 +1,5 @@
+# https://leetcode.com/problems/valid-palindrome/
+# O(n), O(n)
 class Solution:
     def isPalindrome(self, s: str) -> bool:
         l, r = 0, len(s) - 1
@@ -10,10 +12,10 @@ class Solution:
             if s[l].lower() != s[r].lower():
                 return False
 
-            l += 1; r -= 1
+            l += 1
+            r -= 1
 
         return True
-
 
 
 if __name__ == "__main__":
