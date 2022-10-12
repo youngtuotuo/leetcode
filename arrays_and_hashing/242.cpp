@@ -1,3 +1,8 @@
+#include <iostream>
+#include <vector>
+#include <string>
+using namespace std;
+
 // https://leetcode.com/problems/valid-anagram/
 // O(n), O(26)
 class Solution {
@@ -22,3 +27,12 @@ public:
         return true ;
     }
 };
+
+int main (int argc, char *argv[])
+{
+  string s = "anagram";
+  string t = "nagaram";
+  bool ans = Solution().isAnagram(s, t);
+  cout << ans << endl;
+  return 0;
+}

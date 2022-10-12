@@ -14,3 +14,9 @@ class Solution:
                 return [pair[target - num], index]
             else:
                 pair[num] = index
+
+
+if __name__ == "__main__":
+    nums = [2, 7, 11, 15]
+    target = 9
+    print(Solution().twoSum(nums, target))
