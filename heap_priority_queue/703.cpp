@@ -3,18 +3,17 @@
 #include <vector>
 using namespace std;
 
-// https:/#/leetcode.com/problems/kth-largest-element-in-a-stream/
-// O(n log# n + m log k), n = length of nums, m = add calls
+// https://leetcode.com/problems/kth-largest-element-in-a-stream/
+// O(n log n + m log k), n = length of nums, m = add calls
 // O(n)
 
 class KthLargest {
 public:
   KthLargest(int k, vector<int> &nums) {
-    this->k = k;
     for (int i = 0; i < nums.size(); i++) {
       pq.push(nums[i]);
     }
-    while (pq.size() > this->k) {
+    while (pq.size() > k) {
       pq.pop();
     }
   }
