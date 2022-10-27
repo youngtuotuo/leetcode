@@ -1,5 +1,10 @@
-# https://leetcode.com/problems/encode-and-decode-strings/
-# O(n), O(1), n total length of the strings
+"""
+Design an algorithm to encode a list of strings to a string. The encoded string
+is then sent over the network and is decoded back to the original list of strings.
+
+https://leetcode.com/problems/encode-and-decode-strings/
+O(n), O(1), n total length of the strings
+"""
 
 
 class Solution:

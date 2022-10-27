@@ -1,5 +1,12 @@
-# https://leetcode.com/problems/climbing-stairs/
-# O(n-1), O(1)
+"""
+You are climbing a staircase. It takes n steps to reach the top.
+
+Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top?
+
+https://leetcode.com/problems/climbing-stairs/
+O(n-1), O(1)
+"""
+
 class Solution:
     def climbStairs(self, n: int) -> int:
         one, two = 1, 1

@@ -1,10 +1,14 @@
 #include <iostream>
-#include <vector>
 #include <unordered_set>
+#include <vector>
 using namespace std;
 
-// https://leetcode.com/problems/contains-duplicate/
-// O(n), O(n)
+/*
+  Given an integer array nums, return true if any value appears at least twice
+  in the array, and return false if every element is distinct.
+  https://leetcode.com/problems/contains-duplicate/
+  O(n), O(n)
+*/
 class Solution {
 public:
   bool containsDuplicate(vector<int> &nums) {

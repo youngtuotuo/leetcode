@@ -1,21 +1,24 @@
-# https://leetcode.com/problems/contains-duplicate/
-# O(n), O(n)
-
-
 from typing import List
+
+
+"""
+    Given an integer array nums, return true if any value appears at least twice in the array,
+    and return false if every element is distinct.
+    https://leetcode.com/problems/contains-duplicate/
+    O(n), O(n)
+"""
 
 
 class Solution:
     def containsDuplicate(self, nums: List[int]) -> bool:
-        collect = dict()
+        collect = set()
         for num in nums:
             if num in collect:
-                collect[num] += 1
-                if collect[num] >= 2:
-                    return True
+                return True
             else:
-                collect[num] = 1
+                collect.add(num)
         return False
+
 
 if __name__ == "__main__":
     nums = [1, 2, 3, 1]

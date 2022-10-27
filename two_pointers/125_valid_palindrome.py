@@ -1,5 +1,12 @@
-# https://leetcode.com/problems/valid-palindrome/
-# O(n), O(n)
+"""
+A phrase is a palindrome if, after converting all uppercase letters into lowercase letters and removing all non-alphanumeric characters, it reads the same forward and backward. Alphanumeric characters include letters and numbers.
+
+Given a string s, return true if it is a palindrome, or false otherwise.
+
+https://leetcode.com/problems/valid-palindrome/
+O(n), O(n)
+"""
+
 class Solution:
     def isPalindrome(self, s: str) -> bool:
         l, r = 0, len(s) - 1

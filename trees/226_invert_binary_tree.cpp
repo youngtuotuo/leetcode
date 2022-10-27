@@ -1,8 +1,12 @@
 #include <iostream>
 using namespace std;
 
-// https://leetcode.com/problems/invert-binary-tree/
-// O(n), O(n)
+/*
+Given the root of a binary tree, invert the tree, and return its root.
+https://leetcode.com/problems/invert-binary-tree/
+O(n), O(n)
+*/
+
 struct TreeNode {
   int val;
   TreeNode *left;
