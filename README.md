@@ -1,10 +1,8 @@
-# Leetcode practice based on [NeetCode](https://neetcode.io/practice)
+# Leetcode based on [NeetCode](https://neetcode.io/practice)
 All code are runnable, not only contains the Solution class.
 
 # Useful code snippet for some data structure
 ## Singly Linked List
-
-
 
 ```python
 class ListNode:
