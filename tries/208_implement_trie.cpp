@@ -35,16 +35,45 @@ public:
   }
 
   void insert(string word) {
-
+    TrieNode* node = root;
+    int curr = 0;
+    for (int i = 0; i < word.size(); i++) {
+      curr = word[i] - 'a';
+      if (node->children[curr] == NULL) {
+        node->children[curr] = new TrieNode();
+      }
+      node = node->children[curr];
+    }
+    node->isEnd = true;
   }
 
   bool search(string word) {
+    TrieNode* node = root;
+    int curr = 0;
+    for (int i = 0; i < word.size(); i++) {
+      curr = word[i] - 'a';
+      if (node->children[curr] == NULL) {
+        return false;
+      }
+      node = node->children[curr];
+    }
+    return node->isEnd;
 
   }
 
   bool startsWith(string prefix) {
-
+    TrieNode* node = root;
+    int curr = 0;
+    for (int i = 0; i < prefix.size(); i++) {
+      curr = prefix[i] - 'a';
+      if (node->children[curr] == NULL) {
+        return false;
+      }
+      node = node->children[curr];
+    }
+    return true;
   }
+
 private:
   TrieNode* root;
 };
@@ -52,6 +81,12 @@ private:
 
 int main (int argc, char *argv[])
 {
-  
+  Trie* obj = new Trie(); 
+  obj->insert("apple");
+  cout << obj->search("apple") << endl;
+  cout << obj->search("app") << endl;
+  cout << obj->startsWith("app") << endl;
+  obj->insert("app");
+  cout << obj->search("app") << endl;
   return 0;
 }
