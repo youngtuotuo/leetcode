@@ -16,6 +16,7 @@ https://leetcode.com/problems/valid-sudoku/
 O(s^2), O(s^2), s is the size of the sudoku board
 """
 
+
 class Solution:
     def isValidSudoku(self, board: List[List[str]]) -> bool:
         cols = collections.defaultdict(set)
@@ -47,14 +48,14 @@ class Solution:
                 if board[r][c] == ".":
                     continue
                 if (
-                    cols[c][ord(board[r][c]) - ord('0') - 1]
-                    or rows[r][ord(board[r][c]) - ord('0') - 1]
-                    or squares[(r // 3) * 3 + (c // 3)][ord(board[r][c]) - ord('0') - 1]
+                    cols[c][ord(board[r][c]) - ord("0") - 1]
+                    or rows[r][ord(board[r][c]) - ord("0") - 1]
+                    or squares[(r // 3) * 3 + (c // 3)][ord(board[r][c]) - ord("0") - 1]
                 ):
                     return False
-                cols[c][ord(board[r][c]) - ord('0') - 1] = True
-                rows[r][ord(board[r][c]) - ord('0') - 1] = True
-                squares[(r // 3) * 3 + (c // 3)][ord(board[r][c]) - ord('0') - 1] = True
+                cols[c][ord(board[r][c]) - ord("0") - 1] = True
+                rows[r][ord(board[r][c]) - ord("0") - 1] = True
+                squares[(r // 3) * 3 + (c // 3)][ord(board[r][c]) - ord("0") - 1] = True
 
         return True
 

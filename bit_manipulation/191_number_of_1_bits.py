@@ -10,6 +10,7 @@ https://leetcode.com/problems/number-of-1-bits/
 O(32), (1)
 """
 
+
 class Solution:
     def hammingWeight(self, n: int) -> int:
         res = 0

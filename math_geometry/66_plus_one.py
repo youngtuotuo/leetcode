@@ -10,6 +10,7 @@ https://leetcode.com/problems/plus-one/
 O(n), O(1)
 """
 
+
 class Solution:
     def plusOne(self, digits: List[int]) -> List[int]:
         for i in range(len(digits) - 1, -1, -1):

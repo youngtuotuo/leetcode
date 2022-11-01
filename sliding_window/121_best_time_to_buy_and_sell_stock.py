@@ -9,6 +9,8 @@ Return the maximum profit you can achieve from this transaction. If you cannot a
 https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
 O(n), O(n)
 """
+
+
 class Solution:
     def maxProfit(self, prices: List[int]) -> int:
         if not prices:

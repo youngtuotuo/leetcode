@@ -6,12 +6,12 @@ https://leetcode.com/problems/invert-binary-tree/
 O(n), O(n)
 """
 
+
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
         self.val = val
         self.left = left
         self.right = right
-
 
 
 class Solution:
@@ -29,6 +29,7 @@ class Solution:
 
 
 if __name__ == "__main__":
+
     def printBT(prefix: str, node: TreeNode, isRoot: bool, isLeft: bool):
         if node:
             res = prefix

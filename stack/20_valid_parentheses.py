@@ -10,6 +10,7 @@ An input string is valid if:
 # O(n), O(n)
 """
 
+
 class Solution:
     def isValid(self, s: str) -> bool:
         left = []

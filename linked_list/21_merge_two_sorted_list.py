@@ -1,7 +1,6 @@
 from typing import Optional
 
 
-
 """
 You are given the heads of two sorted linked lists list1 and list2.
 
@@ -14,6 +13,7 @@ https://leetcode.com/problems/merge-two-sorted-lists/
 O(n), O(n)
 """
 
+
 class ListNode:
     def __init__(self, val=0, next=None):
         self.val = val
@@ -22,11 +22,14 @@ class ListNode:
     def __repr__(self):
         return f"ListNode({self.val})->{self.next.__repr__()}"
 
+
 class Solution:
-    def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:
+    def mergeTwoLists(
+        self, list1: Optional[ListNode], list2: Optional[ListNode]
+    ) -> Optional[ListNode]:
         res = ListNode()
         curr = res
-        while (list1 and list2):
+        while list1 and list2:
             if list1.val < list2.val:
                 curr.next = list1
                 list1 = list1.next
@@ -39,7 +42,7 @@ class Solution:
         curr.next = (list1) or (list2)
 
         return res.next
-        
+
 
 if __name__ == "__main__":
     list1 = ListNode(1, ListNode(2, ListNode(4)))

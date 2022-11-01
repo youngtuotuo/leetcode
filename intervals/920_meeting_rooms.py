@@ -6,6 +6,7 @@ https://leetcode.com/problems/meeting-rooms/
 O(n long n + n), O(1)
 """
 
+
 class Solution:
     def canAttendMeetings(self, intervals):
         intervals.sort(key=lambda x: x[0])
@@ -20,5 +21,5 @@ class Solution:
 
 
 if __name__ == "__main__":
-    intervals = [(0,30),(5,10),(15,20)]
+    intervals = [(0, 30), (5, 10), (15, 20)]
     print(Solution().canAttendMeetings(intervals))

@@ -13,6 +13,7 @@ https://leetcode.com/problems/linked-list-cycle/
 O(n), O(1)
 """
 
+
 class ListNode:
     def __init__(self, x=0, next=None):
         self.val = x
@@ -22,13 +23,12 @@ class ListNode:
 class Solution:
     def hasCycle(self, head: Optional[ListNode]) -> bool:
         slow, fast = head, head
-        while (fast and fast.next):
+        while fast and fast.next:
             fast = fast.next.next
             slow = slow.next
-            if (slow == fast):
+            if slow == fast:
                 return True
         return False
-        
 
 
 if __name__ == "__main__":

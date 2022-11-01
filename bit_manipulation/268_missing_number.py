@@ -9,11 +9,12 @@ https://leetcode.com/problems/missing-number/
 O(n), O(1)
 """
 
+
 class Solution:
     def missingNumber(self, nums: List[int]) -> int:
         res = len(nums)
         for i in range(res):
-            res += (i - nums[i])
+            res += i - nums[i]
 
         return res
 

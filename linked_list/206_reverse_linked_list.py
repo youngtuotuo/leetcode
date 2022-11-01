@@ -6,6 +6,7 @@ Given the head of a singly linked list, reverse the list, and return the reverse
 https://leetcode.com/problems/reverse-linked-list/
 """
 
+
 class ListNode:
     def __init__(self, val=0, next=None):
         self.val = val

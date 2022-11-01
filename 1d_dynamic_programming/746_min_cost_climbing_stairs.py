@@ -12,6 +12,7 @@ https://leetcode.com/problems/min-cost-climbing-stairs/
 O(n - 3), O(n + 1)
 """
 
+
 class Solution:
     def minCostClimbingstairs(self, cost: List[int]) -> int:
         cost.append(0)

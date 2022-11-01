@@ -11,6 +11,7 @@ from typing import List
 # https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/
 # O(n), O(1)
 
+
 class Solution:
     def twoSum(self, numbers: List[int], target: int) -> List[int]:
         l, r = 0, len(numbers) - 1
@@ -26,6 +27,6 @@ class Solution:
 
 
 if __name__ == "__main__":
-    numbers = [2,7,11,15]
+    numbers = [2, 7, 11, 15]
     target = 9
     print(Solution().twoSum(numbers, target))
