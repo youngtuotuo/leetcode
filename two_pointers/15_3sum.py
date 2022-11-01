@@ -18,6 +18,9 @@ class Solution:
         res = []
         nums.sort()
         for i, v in enumerate(nums[:-2]):
+            if v > 0:
+                break
+
             if i > 0 and v == nums[i - 1]:
                 continue
             l, r = i + 1, len(nums) - 1
@@ -30,7 +33,7 @@ class Solution:
                 else:
                     res.append([v, nums[l], nums[r]])
                     l += 1
-                    while nums[l] == nums[l - 1] and l < r:
+                    while nums[l] == nums[l + 1] and l < r:
                         l += 1
 
         return res
