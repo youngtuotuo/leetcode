@@ -50,7 +50,8 @@ class Solution {
 };
 
 int main(int argc, char *argv[]) {
-    vector<int> nums = {-1, 0, 1, 2, -1, -4};
+    // vector<int> nums = {-1, 0, 1, 2, -1, -4};
+    vector<int> nums = {-1, 0, 1, 0};
     for (vector<int> v : Solution().threeSum(nums)) {
         cout << '[';
         for (int i : v) {

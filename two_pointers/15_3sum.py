@@ -32,13 +32,14 @@ class Solution:
                     l += 1
                 else:
                     res.append([v, nums[l], nums[r]])
-                    l += 1
                     while nums[l] == nums[l + 1] and l < r:
                         l += 1
+                    l += 1
 
         return res
 
 
 if __name__ == "__main__":
-    nums = [-1, 0, 1, 2, -1, -4]
+    # nums = [-1, 0, 1, 2, -1, -4]
+    nums = [-1, 0, 1, 0]
     print(Solution().threeSum(nums))
