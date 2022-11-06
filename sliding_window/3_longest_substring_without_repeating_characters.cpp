@@ -1,16 +1,16 @@
-#include <string>
 #include <iostream>
+#include <string>
 #include <unordered_set>
 using namespace std;
 
-
-/* Given a string s, find the length of the longest substring without repeating characters.
+/* Given a string s, find the length of the longest substring without repeating
+characters.
 https://leetcode.com/problems/longest-substring-without-repeating-characters/
 O(n), O(n) */
 
 class Solution {
-public:
-    int lengthOfLongestSubstring(string& s) {
+  public:
+    int lengthOfLongestSubstring(string &s) {
         int res = 0, l = 0;
         unordered_set<char> sSet;
         for (int r = 0; r < s.size(); r++) {
@@ -25,10 +25,7 @@ public:
     }
 };
 
-
-
-int main (int argc, char *argv[])
-{
+int main(int argc, char *argv[]) {
     string s = "pwwkew";
     cout << Solution().lengthOfLongestSubstring(s) << endl;
     return 0;

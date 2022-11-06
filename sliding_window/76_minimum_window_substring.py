@@ -9,6 +9,7 @@ https://leetcode.com/problems/minimum-window-substring/
 O(m + n), O(m + n)
 """
 
+
 class Solution:
     def minWindow(self, s: str, t: str) -> str:
         if t == "":
@@ -33,7 +34,7 @@ class Solution:
                 # update our result
                 if (r - l + 1) < resLen:
                     res = [l, r]
-                    resLen = (r - l + 1)
+                    resLen = r - l + 1
 
                 # pop from the left of our window
                 window[s[l]] -= 1
@@ -41,10 +42,12 @@ class Solution:
                     have -= 1
                 l += 1
         l, r = res
-        return s[l:r+1] if resLen != float("infinity") else ""
+        return s[l : r + 1] if resLen != float("infinity") else ""
 
 
 if __name__ == "__main__":
-    s = "ADOBECODEBANC"
-    t = "ABC"
+    # s = "ADOBECODEBANC"
+    # t = "ABC"
+    s = "aa"
+    t = "aa"
     print(Solution().minWindow(s, t))
