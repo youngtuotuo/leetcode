@@ -36,7 +36,7 @@ struct ListNode {
 };
 
 class Solution {
-  public:
+public:
     ListNode *mergeTwoLists(ListNode *list1, ListNode *list2) {
         ListNode *res = new ListNode();
         ListNode *curr = res;
