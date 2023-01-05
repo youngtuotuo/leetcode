@@ -25,7 +25,7 @@ public:
         int top(0), bot(rows);
         int row(0);
         while (top <= bot) {
-            int row = top + (bot - top) / 2;
+            row = top + (bot - top) / 2;
             if (target > matrix[row][cols]) {
                 top = row + 1;
             } else if (target < matrix[row][0]) {
@@ -39,7 +39,6 @@ public:
             return false;
         }
 
-        // int row = top + (bot - top) / 2;
         int l(0), r(cols);
         while (l <= r) {
             int m = l + (r - l) / 2;
@@ -56,7 +55,8 @@ public:
 };
 
 int main(int argc, char *argv[]) {
-    vector<vector<int>> matrix = {{1,3,5,7},{10,11,16,20},{23,30,34,60}};
+    // vector<vector<int>> matrix = {{1,3,5,7},{10,11,16,20},{23,30,34,60}};
+    vector<vector<int>> matrix = {{1},{3}};
     int target = 3;
     cout << Solution().searchMatrix(matrix, target) << endl;
     return 0;
