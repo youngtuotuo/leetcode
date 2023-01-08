@@ -30,7 +30,7 @@ class Solution:
 
 if __name__ == "__main__":
 
-    def printBT(prefix: str, node: TreeNode, isRoot: bool, isLeft: bool):
+    def printBT(prefix: str, node: TreeNode | None, isRoot: bool, isLeft: bool):
         if node:
             res = prefix
             res += "root " if isRoot else "left " if isLeft else "right "
